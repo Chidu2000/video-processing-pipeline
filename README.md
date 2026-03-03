@@ -41,6 +41,22 @@ flowchart LR
     ecs --> ffmpeg[ffmpeg Transcoding]
     ffmpeg -->|Upload renditions| prod[(S3 Production Bucket)]
     ffmpeg -.->|Task exits after completion| kill([Container Stops])
+
+    classDef userNode fill:#EAF2FF,stroke:#2F6FED,color:#0F2A63,stroke-width:2px;
+    classDef s3Node fill:#E9F9EE,stroke:#2E9B4F,color:#14532D,stroke-width:2px;
+    classDef sqsNode fill:#FFF1F7,stroke:#E11D8A,color:#831843,stroke-width:2px;
+    classDef pollNode fill:#FFF9E8,stroke:#D97706,color:#7C2D12,stroke-width:2px;
+    classDef ecsNode fill:#EEF2FF,stroke:#4F46E5,color:#312E81,stroke-width:2px;
+    classDef ffmpegNode fill:#F4F4F5,stroke:#18181B,color:#09090B,stroke-width:2px;
+    classDef stopNode fill:#FEE2E2,stroke:#DC2626,color:#7F1D1D,stroke-width:2px;
+
+    class user userNode;
+    class temp,prod s3Node;
+    class sqs sqsNode;
+    class p1,p2 pollNode;
+    class ecs ecsNode;
+    class ffmpeg ffmpegNode;
+    class kill stopNode;
 ```
 
 ## Usage (Local Setup)
