@@ -1,0 +1,25 @@
+{
+  "name": "video-processing-pipeline",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsc-watch --onSuccess \"node ./dist/index.js\""
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.12.1",
+  "dependencies": {
+    "@aws-sdk/client-ecs": "^3.978.0",
+    "@aws-sdk/client-sqs": "^3.978.0",
+    "aws-lambda": "^1.0.7",
+    "tsc-watch": "^7.2.0"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.160"
+  }
+}
